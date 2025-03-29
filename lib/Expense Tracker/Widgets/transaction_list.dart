@@ -9,6 +9,7 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     final transactionProvider = Provider.of<TransactionProvider>(context);
     return ListView.builder(
+      itemCount: transactionProvider.transaction.length,
       itemBuilder: (context, index) {
         final tx = transactionProvider.transaction[index];
         return GestureDetector(

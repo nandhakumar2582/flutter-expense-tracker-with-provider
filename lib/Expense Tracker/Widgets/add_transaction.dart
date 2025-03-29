@@ -64,6 +64,11 @@ class _AddTransactionState extends State<AddTransaction> {
               ElevatedButton(onPressed: submitData, child: Text("ADD Transaction")),
             ],
           ),
+          const SizedBox(height:10),
+          Text(
+            'Remaining Balance: \$${Provider.of<TransactionProvider>(context).remainingBalance.toStringAsFixed(2)}',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          )
         ],
       ),
     );
